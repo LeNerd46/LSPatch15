@@ -17,7 +17,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.eclipse.jgit:org.eclipse.jgit:6.3.0.202209071007-r")
+        classpath("org.eclipse.jgit:org.eclipse.jgit:7.2.0.202503040940-r")
     }
 }
 
@@ -234,13 +234,5 @@ subprojects {
     }
     plugins.withId("com.android.library") {
         configureBaseExtension()
-    }
-}
-
-allprojects {
-    plugins.withId("org.jetbrains.kotlin.jvm") {
-        extensions.configure<org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension>("kotlin") {
-            jvmToolchain(21)
-        }
     }
 }
