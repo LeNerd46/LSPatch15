@@ -87,19 +87,19 @@ jobs:
         ./gradlew buildAll
 
     - name: Upload Debug artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: lspatch-debug
         path: out/debug/*
 
     - name: Upload Release artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: lspatch-release
         path: out/release/*
 
     - name: Upload mappings
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: mappings
         path: |
@@ -107,7 +107,7 @@ jobs:
           manager/build/outputs/mapping
 
     - name: Upload symbols
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: symbols
         path: |
